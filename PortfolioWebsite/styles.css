@@ -1,0 +1,170 @@
+/* Modern & Sleek Dark Mode Friendly Theme */
+html {
+    scroll-behavior: smooth;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #64B5F6; /* Bright Orange for Visibility */
+    color: #FFFFFF; /* White Text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#backToTop:hover {
+    background-color: #90CAF9; /* Darker Orange on Hover */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark Background */
+    color: #FAFAFA; /* Soft White Text */
+}
+
+/* Header Styles */
+header {
+    background-color: #1E1E1E; /* Slightly Lighter Dark Gray */
+    color: #FAFAFA;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Header and Section Titles */
+header h1, 
+h2 {
+    color: #64B5F6; /* Matches header tab buttons */
+}
+.header-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #64B5F6; /* Soft Blue */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #D0E9FF; /* Lighter Sky Blue */
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Project Cards */
+.project {
+    background-color: #1A1A1A; /* Slightly darker shade for subtlety */
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    background-color: #1C1C1C; /* Slightly lighter than default */
+}
+
+.project h3 {
+    color: #F5F5F5;
+}
+
+.project a {
+    color: #1E88E5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    color: #D0E9FF;
+    text-decoration: underline;
+}
+
+/* Contact Section */
+#contact a {
+    color: #1E88E5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #D0E9FF;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #1E1E1E;
+    color: #FAFAFA;
+    text-align: center;
+    padding: 3px;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
