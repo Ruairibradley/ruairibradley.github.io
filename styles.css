@@ -3,13 +3,14 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Back to Top Button */
 #backToTop {
     position: fixed;
     bottom: 60px;
     right: 20px;
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #64B5F6; /* Bright Orange for Visibility */
+    background-color: #64B5F6; /* Bright Blue for Visibility */
     color: #FFFFFF; /* White Text */
     border: none;
     border-radius: 5px;
@@ -19,7 +20,7 @@ html {
 }
 
 #backToTop:hover {
-    background-color: #90CAF9; /* Darker Orange on Hover */
+    background-color: #90CAF9; /* Lighter Blue on Hover */
 }
 
 /* General Styles */
@@ -33,21 +34,18 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #1E1E1E; /* Slightly Lighter Dark Gray */
+    background-color: #1E1E1E;
     color: #FAFAFA;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 /* Header and Section Titles */
 header h1, 
 h2 {
     color: #64B5F6; /* Matches header tab buttons */
-}
-.header-logo {
-    font-size: 1.5em;
-    font-weight: bold;
 }
 
 nav ul {
@@ -92,7 +90,7 @@ section {
 .about-image img {
     width: 300px;
     height: 300px;
-    border-radius: 50%; /* Makes the image circular */
+    border-radius: 50%; /* Circular image */
     object-fit: cover;
     box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.4);
 }
@@ -116,33 +114,39 @@ section {
 
 /* Project Cards */
 .project {
-    background-color: #1A1A1A; /* Slightly darker shade for subtlety */
+    background-color: #1A1A1A; /* Slightly darker shade for contrast */
     padding: 20px;
     margin: 20px auto;
     width: 80%;
-    box-shadow: none;
     border-radius: 8px;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .project:hover {
-    transform: scale(1.02);
-    background-color: #1C1C1C; /* Slightly lighter than default */
+    transform: scale(1.03);
+    background-color: #2A2A2A; /* Slightly lighter hover effect */
 }
 
-.project h3 {
-    color: #F5F5F5;
-}
-
-.project a {
-    color: #1E88E5;
+.project h3 a {
+    color: #64B5F6;
     text-decoration: none;
-    font-weight: bold;
 }
 
-.project a:hover {
+.project h3 a:hover {
     color: #D0E9FF;
     text-decoration: underline;
+}
+
+/* Project Detail Page */
+#project-details {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+#project-details img {
+    border-radius: 8px;
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.2);
 }
 
 /* Contact Section */

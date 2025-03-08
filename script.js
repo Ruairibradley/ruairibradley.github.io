@@ -18,7 +18,6 @@ const backToTopButton = document.getElementById("backToTop");
 
 if (backToTopButton) {
     window.addEventListener("scroll", () => {
-        console.log("Scrolling... Y position:", window.scrollY); // Debugging log
         if (window.scrollY > 100) {
             backToTopButton.style.display = "block";
         } else {
@@ -30,3 +29,29 @@ if (backToTopButton) {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 }
+
+// Open External Links in a New Tab
+document.querySelectorAll('a[target="_blank"]').forEach(link => {
+    link.addEventListener("click", function(event) {
+        window.open(this.href, '_blank');
+    });
+});
+
+// Highlight Active Navigation Link
+window.addEventListener('scroll', () => {
+    let scrollPosition = window.scrollY;
+    document.querySelectorAll('section').forEach(section => {
+        let sectionTop = section.offsetTop - 50;
+        let sectionHeight = section.clientHeight;
+        let sectionId = section.getAttribute('id');
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === sectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+});
